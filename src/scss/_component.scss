@@ -1,0 +1,506 @@
+//Loader
+#loading {
+  background-color: #bd4932;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 101;
+  margin-top: 0px;
+  top: 0px;
+  transition: opacity .3s linear, z-index .1s linear .3s;
+
+  &.hide {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+#loading-center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+#object {
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: perspective(160px);
+  }
+  50% {
+    -webkit-transform: perspective(160px) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+//page title
+%title {
+  color: $titleColor;
+  font-size: $titleFontSize;
+  font-weight: $fontMedium;
+}
+
+.page-title {
+  @extend %title;
+  text-transform: uppercase;
+}
+
+.section-title {
+  @extend %title;
+}
+
+//container
+.container {
+  margin: 0 auto;
+
+  &.sm {
+    max-width: 684px;
+  }
+}
+
+//button
+.btn {
+  padding: 13px 22px;
+  color: $white;
+  font-size: 18px;
+  border-radius: 3px;
+
+  &.default-btn {
+    background-color: $darkGray;
+  }
+
+  &.default-btn:hover {
+    background-color: $gray;
+  }
+
+  &.active-btn {
+    background-color: $orange;
+  }
+
+  &.active-btn:hover {
+    background-color: $orangeLight;
+  }
+
+  &.disabled {
+    background-color: $lightGray;
+    cursor: not-allowed;
+  }
+}
+
+//header
+#header {
+  width: 100%;
+  border-bottom: 1px solid $lightGray;
+  background-color: $headerBg;
+
+  .user-control {
+    padding: 18px;
+    border-left: 1px solid $lightGray;
+    font-weight: $fontRegular;
+    font-size: 20px;
+    color: $darkGray;
+    position: relative;
+
+    span {
+      margin: 0 20px 0 15px;
+    }
+
+    .icon-arrow-down {
+      font-size: 12px;
+    }
+
+    &.open {
+      background-color: $xsLightGray;
+
+      .icon-arrow-down {
+        display: inline-block;
+        transform: rotate(180deg);
+        transition: all .1s linear;
+        line-height: 0;
+      }
+    }
+  }
+  .user-notification {
+    padding: 18px;
+    border-left: 1px solid $lightGray;
+    font-weight: $fontRegular;
+    font-size: 20px;
+    color: $darkGray;
+
+    i {
+      position: relative;
+
+      .index-notification {
+        width: 8px;
+        height: 8px;
+        background-color: $orange;
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .user-profile {
+    padding: 18px;
+    border-left: 1px solid $lightGray;
+    font-weight: $fontLight;
+    font-size: 20px;
+    color: $darkGray;
+
+    span {
+      margin-left: 15px;
+      font-size: 13px;
+      color: $blue;
+    }
+  }
+  .user-quit {
+    padding: 18px;
+    border-left: 1px solid $lightGray;
+    font-weight: $fontRegular;
+    font-size: 20px;
+    color: $darkGray;
+  }
+}
+
+//aside
+%activeLink {
+  border-left-color: $orange;
+  background-color: $activeLinkBg;
+  color: $activeLinkColor;
+}
+
+#aside {
+  background-color: $asideBg;
+  width: $asideWidth;
+  height: 100vh;
+  left: 0;
+  z-index: 100;
+
+  .menu-control {
+    padding: 18px;
+
+    .menu-btn {
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: $darkGray;
+
+        & + span {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .aside-menu {
+    margin-bottom: 30px;
+
+    ul {
+      li {
+        color: $darkGray;
+
+        &.active {
+          a {
+            @extend %activeLink;
+          }
+        }
+        a {
+          display: block;
+          padding: 14px;
+          border-left: 4px solid transparent;
+
+          [class*='icon-'] {
+            font-size: 17px;
+            margin-right: 15px;
+          }
+
+          &:hover {
+            @extend %activeLink;
+          }
+        }
+      }
+    }
+  }
+  .your-manager {
+    border-top: 1px solid $black;
+    padding: 30px 18px;
+
+    .title-manager {
+      text-transform: uppercase;
+      font-weight: $fontMedium;
+      color: $darkGray;
+      margin-bottom: 17px;
+    }
+
+    .manager-data {
+      .manager-photo {
+        position: relative;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        .manager-status {
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          background-color: $green;
+          top: 0;
+          right: 0;
+          border-radius: 50%;
+        }
+      }
+      .manager-name {
+        color: $blue;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+//main
+.content-wrapper {
+  padding: 18px;
+  height: calc(100vh - 62px);
+  overflow-y: auto;
+}
+
+//card
+.card {
+  background-color: $cardBg;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  .card-header {
+    border-bottom: 1px solid $lightGray;
+    padding: 18px;
+  }
+
+  .card-date {
+    padding: 30px 0;
+    border-bottom: 1px solid $lightGray;
+  }
+
+  .card-form {
+    .select-group {
+      padding: 18px;
+    }
+    .input-group {
+      label {
+        display: block;
+      }
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.datepicker-form {
+
+  .date-input-wrap {
+    padding: 5px 0;
+    display: inline-block;
+    border: 1px solid $lightGray;
+    border-radius: 3px;
+    color: $black;
+    vertical-align: middle;
+    margin-right: 12px;
+
+    input {
+      padding: 11px 16px;
+
+      &#to {
+        border-left: 1px solid $lightGray;
+      }
+    }
+
+    label {
+      padding: 0 14px 0 10px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+
+  .btn {
+    vertical-align: middle;
+  }
+}
+
+//Drop down
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  padding: 10px 18px 24px;
+  background-color: $xsLightGray;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+//Link{
+.links {
+
+  .btn-row {
+    padding: 23px 0;
+  }
+}
+
+//table
+.table {
+  font-size: $tableFontSize;
+  border-collapse: collapse;
+
+  tbody {
+
+    tr {
+      transition: all .2s linear;
+      &:hover {
+        background-color: $tableTrHover;
+
+        .hide-icons {
+          opacity: 1;
+        }
+      }
+      &:last-child {
+
+        td {
+          border-bottom: 1px solid $lightGray;
+        }
+      }
+    }
+  }
+
+  td {
+    padding: 18px;
+    border-top: 1px solid $lightGray;
+
+    .hide-icons {
+      opacity: 0;
+      transition: all .3s linear;
+
+      & + .hide-icons {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.modal {
+  background-color: $modalBg;
+  display: none;
+
+  &#links {
+    width: 70%;
+    max-width: 1075px;
+    min-height: 100px;
+  }
+}
+
+//input
+//checkbox
+input[type="checkbox"] {
+  display: none;
+
+  & + label {
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $lightGray;
+      background-color: #fff;
+      margin-right: 16px;
+    }
+  }
+
+  &:checked {
+    & + label {
+      &::before {
+        background: $green url("../img/checkbox-bg.png") no-repeat center;
+      }
+    }
+  }
+}
+
+//checkbox wrapper
+.checkbox-wrap {
+  padding: 30px 0;
+
+  .checkboxes {
+    padding-top: 30px;
+    height: 170px;
+
+    .checkbox-group {
+      padding: 12px 30px 12px 12px;
+      flex-grow: 1;
+      flex-basis: 33%;
+
+      &:hover {
+        background-color: $xsLightGray;
+
+        [class*='icon'] {
+          opacity: 1;
+        }
+      }
+
+      [class*='icon'] {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.generate-links {
+  input[type='text'] {
+    flex-grow: 1;
+  }
+  .btn {
+    margin-left: 15px;
+
+    i {
+      vertical-align: sub;
+      margin-right: 15px;
+    }
+  }
+}

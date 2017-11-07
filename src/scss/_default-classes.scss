@@ -1,0 +1,62 @@
+//Flex
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-sb{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.align-self-d{
+  align-self: flex-end;
+}
+
+//position
+.fixed-to-top{
+  position: fixed;
+  z-index:99;
+  top: 0;
+}
+
+//text align
+.text-center{
+  text-align: center;
+}
+
+//line height
+.line-height{
+  line-height: 0;
+}
+
+//text-color
+.text-orange{
+  color: $orange;
+}
+
+.text-grey{
+  color: $gray;
+}
+
+//text weight
+.text-bold{
+  font-weight: 700;
+}
+
+//width
+.full-width{
+  width: 100%;
+}
+
+//margin
+.ml-auto{
+  margin-left: auto;
+}
