@@ -1856,8 +1856,7 @@ input[type='submit'].styler[disabled] {
 }
 
 ._mobileSidebar #aside .aside-menu li a i {
-  margin-right: 0;
-  margin-left: -4px;
+  margin-left: 3px;
 }
 
 ._mobileSidebar #aside .aside-menu li a span {
@@ -1871,7 +1870,31 @@ input[type='submit'].styler[disabled] {
 }
 
 ._mobileSidebar #aside .your-manager {
+  padding: 30px 0 0 0;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+._mobileSidebar #aside .your-manager .title-manager {
   display: none;
+}
+
+._mobileSidebar #aside .your-manager .manager-data {
+  display: block;
+}
+
+._mobileSidebar #aside .your-manager .manager-data .manager-name {
+  display: none;
+}
+
+._mobileSidebar #aside .your-manager .manager-data .manager-photo {
+  margin: 0;
+  text-align: center;
+}
+
+._mobileSidebar #aside .your-manager .manager-data .manager-photo .manager-status {
+  right: 8px;
 }
 
 .flex-container {
@@ -2189,7 +2212,14 @@ input[type='submit'].styler[disabled] {
 }
 
 #aside .aside-menu ul li a {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 14px;
   border-left: 4px solid transparent;
 }
