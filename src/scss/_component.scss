@@ -88,9 +88,11 @@
 //container
 .container {
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
   &.sm {
-    max-width: 684px;
+    max-width: 714px;
   }
 }
 
@@ -130,16 +132,13 @@
   background-color: $headerBg;
 
   .user-control {
+    cursor: pointer;
     padding: 18px;
     border-left: 1px solid $lightGray;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGray;
     position: relative;
-
-    span {
-      margin: 0 20px 0 15px;
-    }
 
     .icon-arrow-down {
       font-size: 12px;
@@ -155,8 +154,13 @@
         line-height: 0;
       }
     }
+
+    &:hover {
+      background-color: $xsLightGray;
+    }
   }
   .user-notification {
+    cursor: pointer;
     padding: 18px;
     border-left: 1px solid $lightGray;
     font-weight: $fontRegular;
@@ -176,8 +180,12 @@
         border-radius: 50%;
       }
     }
+    &:hover {
+      background-color: $xsLightGray;
+    }
   }
   .user-profile {
+    cursor: pointer;
     padding: 18px;
     border-left: 1px solid $lightGray;
     font-weight: $fontLight;
@@ -189,13 +197,22 @@
       font-size: 13px;
       color: $blue;
     }
+
+    &:hover {
+      background-color: $xsLightGray;
+    }
   }
   .user-quit {
+    cursor: pointer;
     padding: 18px;
     border-left: 1px solid $lightGray;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGray;
+
+    &:hover {
+      background-color: $xsLightGray;
+    }
   }
 }
 
@@ -313,6 +330,62 @@
     padding: 18px;
   }
 
+  .card-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .details-wrap {
+      font-size: 16px;
+      margin-bottom: 70px;
+
+      .left-details {
+        min-width: 310px;
+
+        & > div {
+          border-bottom: 1px solid $lightGray;
+        }
+
+        .visit-signups {
+          padding: 12px 0;
+        }
+
+        .ftd {
+          padding: 12px 0;
+        }
+      }
+      .right-details {
+        min-width: 310px;
+
+        & > div {
+          border-bottom: 1px solid $lightGray;
+        }
+
+        .net-deposit {
+          padding: 12px 0;
+        }
+
+        .turn-over {
+          padding: 12px 0;
+        }
+      }
+
+      .title-details{
+        font-weight: $fontBold;
+        color: $titleColor;
+      }
+    }
+
+    .title-graphics{
+      font-weight: $fontBold;
+      color: $titleColor;
+      font-size: 16px;
+    }
+
+    canvas{
+      margin-top: 70px;
+    }
+  }
+
   .card-date {
     padding: 30px 0;
     border-bottom: 1px solid $lightGray;
@@ -373,6 +446,19 @@
   top: 100%;
   left: 0;
   right: 0;
+
+  ul {
+    font-size: 14px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+
+      & + li {
+        margin-top: 15px;
+      }
+    }
+  }
 }
 
 //Link{
