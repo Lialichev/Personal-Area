@@ -580,38 +580,18 @@ button {
 }
 
 .jq-selectbox__select {
-  height: 32px;
-  padding: 0 45px 0 10px;
-  border: 1px solid #CCC;
-  border-bottom-color: #B3B3B3;
+  height: 47px;
+  padding: 15px 0 15px 15px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#E6E6E6));
-  background: -webkit-linear-gradient(#FFF, #E6E6E6);
-  background: -o-linear-gradient(#FFF, #E6E6E6);
-  background: linear-gradient(#FFF, #E6E6E6);
-  -webkit-box-shadow: inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1);
-  font: 14px/32px Arial, sans-serif;
-  color: #333;
-  text-shadow: 1px 1px #FFF;
-}
-
-.jq-selectbox__select:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#E6E6E6));
-  background: -webkit-linear-gradient(#F6F6F6, #E6E6E6);
-  background: -o-linear-gradient(#F6F6F6, #E6E6E6);
-  background: linear-gradient(#F6F6F6, #E6E6E6);
+  color: #a6a6a6;
+  border: 1px solid #e3e3e3;
 }
 
 .jq-selectbox__select:active {
   background: #F5F5F5;
   -webkit-box-shadow: inset 1px 1px 3px #DDD;
           box-shadow: inset 1px 1px 3px #DDD;
-}
-
-.jq-selectbox.focused .jq-selectbox__select {
-  border: 1px solid #5794BF;
 }
 
 .jq-selectbox.disabled .jq-selectbox__select {
@@ -637,18 +617,10 @@ button {
   right: 0;
   width: 34px;
   height: 100%;
-  border-left: 1px solid #CCC;
 }
 
-.jq-selectbox__trigger-arrow {
-  position: absolute;
-  top: 14px;
-  right: 12px;
-  width: 0;
-  height: 0;
-  border-top: 5px solid #999;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
+.jq-selectbox__trigger-arrow:before {
+  content: '\0041';
 }
 
 .jq-selectbox:hover .jq-selectbox__trigger-arrow {
@@ -1934,6 +1906,14 @@ input[type='submit'].styler[disabled] {
           align-self: flex-end;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
 .fixed-to-top {
   position: fixed;
   z-index: 99;
@@ -2044,26 +2024,6 @@ input[type='submit'].styler[disabled] {
   }
 }
 
-.page-title, .section-title {
-  color: #a6a6a6;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.page-title {
-  text-transform: uppercase;
-}
-
-.container {
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container.sm {
-  max-width: 714px;
-}
-
 .btn {
   padding: 13px 22px;
   color: #fff;
@@ -2091,6 +2051,59 @@ input[type='submit'].styler[disabled] {
 .btn.disabled {
   background-color: #e3e3e3;
   cursor: not-allowed;
+}
+
+.page-title, .section-title {
+  color: #a6a6a6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.page-title {
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container.sm {
+  max-width: 714px;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  color: #a6a6a6;
+}
+
+input::-webkit-input-placeholder {
+  color: #a6a6a6;
+}
+
+input::-moz-placeholder {
+  color: #a6a6a6;
+}
+
+input:-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+input::-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+input::placeholder {
+  color: #a6a6a6;
+}
+
+input:focus {
+  border-color: #bababa;
+  color: #333;
 }
 
 #header {
@@ -2304,61 +2317,61 @@ input[type='submit'].styler[disabled] {
   padding: 18px;
 }
 
-.card .card-body {
+.card .card-body .general {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.card .card-body .details-wrap {
+.card .card-body .general .details-wrap {
   font-size: 16px;
   margin-bottom: 70px;
 }
 
-.card .card-body .details-wrap .left-details {
+.card .card-body .general .details-wrap .left-details {
   min-width: 310px;
 }
 
-.card .card-body .details-wrap .left-details > div {
+.card .card-body .general .details-wrap .left-details > div {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.card .card-body .details-wrap .left-details .visit-signups {
+.card .card-body .general .details-wrap .left-details .visit-signups {
   padding: 12px 0;
 }
 
-.card .card-body .details-wrap .left-details .ftd {
+.card .card-body .general .details-wrap .left-details .ftd {
   padding: 12px 0;
 }
 
-.card .card-body .details-wrap .right-details {
+.card .card-body .general .details-wrap .right-details {
   min-width: 310px;
 }
 
-.card .card-body .details-wrap .right-details > div {
+.card .card-body .general .details-wrap .right-details > div {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.card .card-body .details-wrap .right-details .net-deposit {
+.card .card-body .general .details-wrap .right-details .net-deposit {
   padding: 12px 0;
 }
 
-.card .card-body .details-wrap .right-details .turn-over {
+.card .card-body .general .details-wrap .right-details .turn-over {
   padding: 12px 0;
 }
 
-.card .card-body .details-wrap .title-details {
+.card .card-body .general .details-wrap .title-details {
   font-weight: 700;
   color: #a6a6a6;
 }
 
-.card .card-body .title-graphics {
+.card .card-body .general .title-graphics {
   font-weight: 700;
   color: #a6a6a6;
   font-size: 16px;
 }
 
-.card .card-body canvas {
-  margin-top: 70px;
+.card .card-body .general canvas {
+  margin-top: 20px;
 }
 
 .card .card-date {
@@ -2391,6 +2404,7 @@ input[type='submit'].styler[disabled] {
 
 .datepicker-form .date-input-wrap input {
   padding: 11px 16px;
+  border: none;
 }
 
 .datepicker-form .date-input-wrap input#to {
@@ -2490,6 +2504,20 @@ input[type='submit'].styler[disabled] {
   min-height: 100px;
 }
 
+.modal#links .card-header span {
+  cursor: pointer;
+}
+
+.modal#links .select-group {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+.modal#links .select-group .input-group + .input-group {
+  margin-left: 20px;
+}
+
 input[type="checkbox"] {
   display: none;
 }
@@ -2535,6 +2563,13 @@ input[type="checkbox"]:checked + label::before {
   -webkit-flex-basis: 33%;
       -ms-flex-preferred-size: 33%;
           flex-basis: 33%;
+}
+
+.checkbox-wrap .checkboxes .checkbox-group label {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .checkbox-wrap .checkboxes .checkbox-group:hover {

@@ -69,6 +69,35 @@
   }
 }
 
+//button
+.btn {
+  padding: 13px 22px;
+  color: $white;
+  font-size: 18px;
+  border-radius: 3px;
+
+  &.default-btn {
+    background-color: $darkGray;
+  }
+
+  &.default-btn:hover {
+    background-color: $gray;
+  }
+
+  &.active-btn {
+    background-color: $orange;
+  }
+
+  &.active-btn:hover {
+    background-color: $orangeLight;
+  }
+
+  &.disabled {
+    background-color: $lightGray;
+    cursor: not-allowed;
+  }
+}
+
 //page title
 %title {
   color: $titleColor;
@@ -96,32 +125,20 @@
   }
 }
 
-//button
-.btn {
-  padding: 13px 22px;
-  color: $white;
-  font-size: 18px;
-  border-radius: 3px;
+//input
+input{
+  padding: 15px;
+  border: 1px solid $lightGray;
+  border-radius: 5px;
+  color: $titleColor;
 
-  &.default-btn {
-    background-color: $darkGray;
+  &::placeholder{
+    color: $titleColor;
   }
 
-  &.default-btn:hover {
-    background-color: $gray;
-  }
-
-  &.active-btn {
-    background-color: $orange;
-  }
-
-  &.active-btn:hover {
-    background-color: $orangeLight;
-  }
-
-  &.disabled {
-    background-color: $lightGray;
-    cursor: not-allowed;
+  &:focus{
+    border-color: $gray;
+    color: $black;
   }
 }
 
@@ -331,58 +348,61 @@
   }
 
   .card-body {
-    padding-top: 30px;
-    padding-bottom: 30px;
 
-    .details-wrap {
-      font-size: 16px;
-      margin-bottom: 70px;
+    .general {
+      padding-top: 30px;
+      padding-bottom: 30px;
 
-      .left-details {
-        min-width: 310px;
+      .details-wrap {
+        font-size: 16px;
+        margin-bottom: 70px;
 
-        & > div {
-          border-bottom: 1px solid $lightGray;
+        .left-details {
+          min-width: 310px;
+
+          & > div {
+            border-bottom: 1px solid $lightGray;
+          }
+
+          .visit-signups {
+            padding: 12px 0;
+          }
+
+          .ftd {
+            padding: 12px 0;
+          }
+        }
+        .right-details {
+          min-width: 310px;
+
+          & > div {
+            border-bottom: 1px solid $lightGray;
+          }
+
+          .net-deposit {
+            padding: 12px 0;
+          }
+
+          .turn-over {
+            padding: 12px 0;
+          }
         }
 
-        .visit-signups {
-          padding: 12px 0;
-        }
-
-        .ftd {
-          padding: 12px 0;
+        .title-details {
+          font-weight: $fontBold;
+          color: $titleColor;
         }
       }
-      .right-details {
-        min-width: 310px;
 
-        & > div {
-          border-bottom: 1px solid $lightGray;
-        }
-
-        .net-deposit {
-          padding: 12px 0;
-        }
-
-        .turn-over {
-          padding: 12px 0;
-        }
-      }
-
-      .title-details{
+      .title-graphics {
         font-weight: $fontBold;
         color: $titleColor;
+        font-size: 16px;
       }
-    }
 
-    .title-graphics{
-      font-weight: $fontBold;
-      color: $titleColor;
-      font-size: 16px;
-    }
-
-    canvas{
-      margin-top: 70px;
+      canvas {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -419,6 +439,7 @@
 
     input {
       padding: 11px 16px;
+      border: none;
 
       &#to {
         border-left: 1px solid $lightGray;
@@ -517,6 +538,19 @@
     width: 70%;
     max-width: 1075px;
     min-height: 100px;
+
+    .card-header{
+      span{
+        cursor: pointer;
+      }
+    }
+
+    .select-group{
+      flex-wrap: nowrap;
+      .input-group + .input-group{
+        margin-left: 20px;
+      }
+    }
   }
 }
 
@@ -563,6 +597,9 @@ input[type="checkbox"] {
       flex-grow: 1;
       flex-basis: 33%;
 
+      label {
+        flex-grow: 1;
+      }
       &:hover {
         background-color: $xsLightGray;
 
