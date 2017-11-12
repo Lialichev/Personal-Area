@@ -653,6 +653,7 @@ button {
 }
 
 .jq-selectbox__dropdown {
+  top: 97%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -2401,7 +2402,14 @@ input:focus {
 }
 
 .card .card-form .select-group {
-  padding: 18px;
+  padding: 20px;
+}
+
+.card .card-form .select-group label {
+  font-size: 16px;
+  color: #a6a6a6;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .card .card-form .input-group label {
@@ -2567,12 +2575,13 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .checkbox-wrap {
-  padding: 30px 0;
+  padding: 20px;
+  border-top: 1px solid #e3e3e3;
 }
 
 .checkbox-wrap .checkboxes {
   padding-top: 30px;
-  height: 170px;
+  height: 300px;
 }
 
 .checkbox-wrap .checkboxes .checkbox-group {
@@ -2605,6 +2614,11 @@ input[type="checkbox"]:checked + label::before {
   opacity: 0;
 }
 
+.generate-links {
+  border-top: 1px solid #e3e3e3;
+  padding: 20px;
+}
+
 .generate-links input[type='text'] {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2614,6 +2628,12 @@ input[type="checkbox"]:checked + label::before {
 
 .generate-links .btn {
   margin-left: 15px;
+}
+
+.generate-links .btn .icon-links:before {
+  content: '\004c';
+  vertical-align: text-top;
+  margin-right: 10px;
 }
 
 .generate-links .btn i {
