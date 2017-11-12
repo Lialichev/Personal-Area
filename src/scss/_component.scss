@@ -123,6 +123,10 @@
   &.sm {
     max-width: 714px;
   }
+
+  &.xs {
+    max-width: 455px;
+  }
 }
 
 //input
@@ -414,8 +418,8 @@ input {
   .card-form {
     .select-group {
       padding: 20px;
-      
-      label{
+
+      label {
         font-size: 16px;
         color: $titleColor;
         margin-bottom: 10px;
@@ -640,6 +644,20 @@ input[type="checkbox"] {
     i {
       vertical-align: sub;
       margin-right: 15px;
+    }
+  }
+}
+
+.card-wrap {
+  border-bottom: 1px solid $lightGray;
+  .personal {
+    padding: 30px 0;
+
+    .input-group{
+
+      input{
+        width: 310px;
+      }
     }
   }
 }

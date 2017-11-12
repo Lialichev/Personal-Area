@@ -78,8 +78,8 @@
     <!--/menu-control-->
     <div class="aside-menu">
         <ul>
-            <li class="active">
-                <a href="#">
+            <li>
+                <a href="index.html">
                     <i class="icon-general"></i>
                     <span>General</span>
                 </a>
@@ -102,7 +102,7 @@
                     <span>Banners</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="perconal-date.html">
                     <i class="icon-personaldata"></i>
                     <span>Personal data</span>
@@ -141,52 +141,67 @@
     <div class="content-wrapper">
         <div class="card">
             <div class="card-header">
-                <span class="page-title">General statistic</span>
+                <span class="page-title">Presonal data</span>
             </div>
-            <div class="card-date text-center">
-                <form class="datepicker-form">
-                    <div class="date-input-wrap">
-                        <input type="text" name="from" id="from">
-                        <input type="text" name="to" id="to">
-                        <label for="from">
-                            <i class="icon-calendar"></i>
-                        </label>
-                    </div>
-                    <button class="btn active-btn line-height">
-                        <i class="icon-refresh"></i>
-                    </button>
-                </form>
-            </div>
-            <div class="card-body">
-                <div class="general container sm">
-                    <div class="details-wrap flex-container justify-sb">
-                        <div class="left-details">
-                            <div class="visit-signups flex-container justify-sb">
-                                <span class="title-details">Visit Signups</span>
-                                <span>142</span>
-                            </div>
-                            <div class="ftd flex-container justify-sb">
-                                <span class="title-details">FTD</span>
-                                <span>332</span>
-                            </div>
+            <form>
+                <div class="card-wrap">
+                    <div class="personal container xs">
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="nameIs">Name</label>
+                            <input type="text" id="nameIs">
                         </div>
-                        <div class="right-details">
-                            <div class="net-deposit flex-container justify-sb">
-                                <span class="title-details">Net Deposit</span>
-                                <span>472</span>
-                            </div>
-                            <div class="turn-over flex-container justify-sb">
-                                <span class="title-details">Turn Over</span>
-                                <span>276</span>
-                            </div>
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="surname">Surname</label>
+                            <input type="text" id="surname">
+                        </div>
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="number">Phone Number</label>
+                            <input type="number" id="number">
                         </div>
                     </div>
-                    <div class="title-graphics">
-                        <span>Earnings chart</span>
-                    </div>
-                    <canvas id="myChart" width="600" height="400"></canvas>
                 </div>
-            </div>
+                <div class="card-wrap">
+                    <div class="personal container xs">
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="skype">Skype</label>
+                            <input type="text" id="skype">
+                        </div>
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="icq">ICQ</label>
+                            <input type="text" id="icq">
+                        </div>
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="msn">Msn</label>
+                            <input type="text" id="msn">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="personal container xs">
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="wallet">Wallet</label>
+                            <input type="text" id="wallet">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="personal container xs">
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="pass">Password</label>
+                            <input type="password" id="pass">
+                        </div>
+                        <div class="input-group flex-container justify-sb align-center">
+                            <label for="rep">Repeat</label>
+                            <input type="password" id="rep">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn active-btn">Save</button>
+            </form>
         </div>
     </div>
 </main>
