@@ -1,75 +1,84 @@
 //Flex
-.flex-container{
+.flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.justify-sb{
+.justify-sb {
   justify-content: space-between;
 }
 
-.align-center{
+.align-center {
   align-items: center;
 }
 
-.justify-end{
+.justify-end {
   justify-content: flex-end;
 }
 
-.align-self-d{
+.align-self-d {
   align-self: flex-end;
 }
 
 //width
-.w-100{
+.w-100 {
   width: 100%;
 }
 
-.w-30{
+.w-30 {
   width: 30%;
 }
 
 //position
-.fixed-to-top{
+.fixed-to-top {
   position: fixed;
-  z-index:99;
+  z-index: 99;
   top: 0;
 }
 
 //text align
-.text-center{
+.text-center {
   text-align: center;
 }
 
 //line height
-.line-height{
+.line-height {
   line-height: 0;
 }
 
 //text-color
-.text-orange{
+.text-orange {
   color: $orange;
 }
 
-.text-grey{
+.text-grey {
   color: $gray;
 }
 
+.text-titleColor {
+  color: $titleColor;
+}
+
 //text weight
-.text-bold{
+.text-bold {
   font-weight: 700;
 }
 
 //width
-.full-width{
+.full-width {
   width: 100%;
 }
 
 //margin
-.ml-auto{
+.ml-auto {
   margin-left: auto;
 }
 
-.mg-span{
+.mg-span {
   margin: 0 20px 0 15px;
+}
+
+//vertical
+.ver-ali-m{
+  vertical-align: middle;
 }
