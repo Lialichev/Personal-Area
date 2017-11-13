@@ -2343,6 +2343,26 @@ input:focus {
   padding: 18px;
 }
 
+.card .card-wrap {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.card .card-wrap .personal {
+  padding: 30px 0;
+}
+
+.card .card-wrap .personal .input-group + .input-group {
+  margin-top: 15px;
+}
+
+.card .card-wrap .personal .input-group input {
+  width: 310px;
+}
+
+.card .btn-wrap {
+  padding: 30px 0;
+}
+
 .card .card-body .general {
   padding-top: 30px;
   padding-bottom: 30px;

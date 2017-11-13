@@ -351,6 +351,27 @@ input {
     padding: 18px;
   }
 
+  .card-wrap {
+    border-bottom: 1px solid $lightGray;
+    .personal {
+      padding: 30px 0;
+
+      .input-group{
+
+        & + .input-group{
+          margin-top: 15px;
+        }
+
+        input{
+          width: 310px;
+        }
+      }
+    }
+  }
+
+  .btn-wrap{
+    padding: 30px 0;
+  }
   .card-body {
 
     .general {
