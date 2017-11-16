@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Template</title>
+    <title>Payout history</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -78,8 +78,8 @@
     <!--/menu-control-->
     <div class="aside-menu">
         <ul>
-            <li class="active">
-                <a href="#">
+            <li>
+                <a href="index.html">
                     <i class="icon-general"></i>
                     <span>General</span>
                 </a>
@@ -108,7 +108,7 @@
                     <span>Personal data</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="payout.html">
                     <i class="icon-payout"></i>
                     <span>Payout</span>
@@ -141,7 +141,7 @@
     <div class="content-wrapper">
         <div class="card">
             <div class="card-header">
-                <span class="page-title">General statistic</span>
+                <span class="page-title">Detail statistic</span>
             </div>
             <div class="card-date text-center">
                 <form class="datepicker-form">
@@ -158,33 +158,90 @@
                 </form>
             </div>
             <div class="card-body">
-                <div class="general container sm">
-                    <div class="details-wrap flex-container justify-sb">
-                        <div class="left-details">
-                            <div class="visit-signups flex-container justify-sb">
-                                <span class="title-details">Visit Signups</span>
-                                <span>142</span>
-                            </div>
-                            <div class="ftd flex-container justify-sb">
-                                <span class="title-details">FTD</span>
-                                <span>332</span>
-                            </div>
-                        </div>
-                        <div class="right-details">
-                            <div class="net-deposit flex-container justify-sb">
-                                <span class="title-details">Net Deposit</span>
-                                <span>472</span>
-                            </div>
-                            <div class="turn-over flex-container justify-sb">
-                                <span class="title-details">Turn Over</span>
-                                <span>276</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="title-graphics">
-                        <span>Earnings chart</span>
-                    </div>
-                    <canvas id="myChart" width="600" height="400"></canvas>
+                <div class="payout">
+                    <table class="table full-width">
+                        <thead>
+                        <tr>
+                            <td class="text-grey text-bold">
+                                <a href="#">
+                                    Date
+                                    <i class="icon icon-arrow-down"></i>
+                                </a>
+                            </td>
+                            <td class="text-grey text-bold">
+                                <a href="#">
+                                    Amount ($)
+                                    <i class="icon icon-arrow-down"></i>
+                                </a>
+                            </td>
+                            <td class="text-grey text-bold">Deal</td>
+                            <td class="text-grey text-bold">Account</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        <tr>
+                            <td>17/08/02 (12:58)</td>
+                            <td>34.384.00</td>
+                            <td>cpl(200)</td>
+                            <td>bank</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ul class="nav-table text-center">
+                        <li><a href="#" class="icon icon-arrow-left ver-ali-m"></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#" class="icon icon-arrow-right ver-ali-m"></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
