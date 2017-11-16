@@ -2670,6 +2670,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .checkbox-wrap {
+  display: inline-block;
   padding: 20px;
   border-top: 1px solid #e3e3e3;
 }
@@ -2707,6 +2708,16 @@ input[type="checkbox"]:checked + label::before {
 
 .checkbox-wrap .checkboxes .checkbox-group [class*='icon'] {
   opacity: 0;
+}
+
+.checkbox-head-wrap .checkbox-wrap {
+  width: 50%;
+}
+
+.checkbox-head-wrap .checkbox-wrap .checkbox-group {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
 }
 
 .generate-links {

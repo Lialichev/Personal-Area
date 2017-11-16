@@ -347,7 +347,7 @@ input {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   .details,
-  .payout{
+  .payout {
     padding: 30px;
 
     .nav-table {
@@ -356,17 +356,17 @@ input {
       li {
         display: inline-block;
 
-        a{
+        a {
           padding: 15px 20px;
           font-size: 16px;
           border-radius: 4px;
           color: $blue;
 
-          &:hover{
+          &:hover {
             background-color: $xsLightGray;
             color: $titleColor;
           }
-          &.icon{
+          &.icon {
             color: $titleColor;
             padding: 15px;
           }
@@ -628,7 +628,7 @@ input {
   display: none;
 
   &#links,
-  &#banners{
+  &#banners {
     width: 70%;
     max-width: 1075px;
     min-height: 100px;
@@ -679,9 +679,9 @@ input[type="checkbox"] {
 
 //checkbox wrapper
 .checkbox-wrap {
+  display: inline-block;
   padding: 20px;
   border-top: 1px solid #e3e3e3;
-
   .checkboxes {
     padding-top: 30px;
     height: 300px;
@@ -694,6 +694,7 @@ input[type="checkbox"] {
       label {
         flex-grow: 1;
       }
+
       &:hover {
         background-color: $xsLightGray;
 
@@ -705,6 +706,16 @@ input[type="checkbox"] {
       [class*='icon'] {
         opacity: 0;
       }
+    }
+  }
+}
+
+.checkbox-head-wrap{
+  .checkbox-wrap{
+    width: 50%;
+
+    .checkbox-group{
+      flex-basis: 100%;
     }
   }
 }
