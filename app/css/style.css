@@ -2720,6 +2720,10 @@ input[type="checkbox"]:checked + label::before {
           flex-basis: 100%;
 }
 
+.checkbox-head-wrap .checkbox-wrap + .checkbox-wrap {
+  border-left: 1px solid #e3e3e3;
+}
+
 .generate-links {
   border-top: 1px solid #e3e3e3;
   padding: 20px;

@@ -717,6 +717,10 @@ input[type="checkbox"] {
     .checkbox-group{
       flex-basis: 100%;
     }
+
+    & + .checkbox-wrap{
+      border-left: 1px solid #e3e3e3;
+    }
   }
 }
 
