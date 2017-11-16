@@ -162,6 +162,11 @@ textarea {
     color: $darkGray;
     position: relative;
 
+    @media (max-width: 599px) {
+      padding: 18px 10px;
+      font-size: 15px;
+    }
+
     .icon-arrow-down {
       font-size: 12px;
     }
@@ -189,6 +194,11 @@ textarea {
     font-size: 20px;
     color: $darkGray;
 
+    @media (max-width: 599px) {
+      padding: 18px 10px;
+      font-size: 15px;
+    }
+
     i {
       position: relative;
 
@@ -214,6 +224,11 @@ textarea {
     font-size: 20px;
     color: $darkGray;
 
+    @media (max-width: 599px) {
+      padding: 18px 10px;
+      font-size: 15px;
+    }
+
     span {
       margin-left: 15px;
       font-size: 13px;
@@ -231,6 +246,11 @@ textarea {
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGray;
+
+    @media (max-width: 599px) {
+      padding: 18px 10px;
+      font-size: 15px;
+    }
 
     &:hover {
       background-color: $xsLightGray;
@@ -352,7 +372,7 @@ textarea {
     padding: 30px;
 
     .nav-table {
-      margin-top: 30px;
+      margin-top: 21px;
 
       li {
         display: inline-block;
@@ -363,6 +383,12 @@ textarea {
           border-radius: 4px;
           color: $blue;
 
+          @media (max-width: 767px) {
+            padding: 10px 15px;
+          }
+          @media (max-width: 599px) {
+            padding: 5px 9px;
+          }
           &:hover {
             background-color: $xsLightGray;
             color: $titleColor;
@@ -374,6 +400,9 @@ textarea {
         }
       }
     }
+    @media (max-width: 1199px) {
+      padding: 0 0 20px 0;
+    }
   }
 
   .card-header {
@@ -384,7 +413,7 @@ textarea {
   .card-wrap {
     border-bottom: 1px solid $lightGray;
     .personal {
-      padding: 30px 0;
+      padding: 30px 15px;
 
       .input-group {
 
@@ -394,6 +423,10 @@ textarea {
 
         input {
           width: 310px;
+
+          @media (max-width: 599px) {
+            width: 250px;
+          }
         }
       }
     }
@@ -411,6 +444,10 @@ textarea {
       .details-wrap {
         font-size: 16px;
         margin-bottom: 70px;
+
+        @media (max-width: 767px) {
+          flex-direction: column;
+        }
 
         .left-details {
           min-width: 310px;
@@ -521,6 +558,9 @@ textarea {
       padding: 11px 16px;
       border: none;
 
+      @media (max-width: 767px) {
+        width: 100px;
+      }
       &#to {
         border-left: 1px solid $lightGray;
       }
@@ -583,7 +623,6 @@ textarea {
 
       td {
         border-top: none;
-
         a {
           padding: 10px;
           margin-left: -10px;
@@ -633,6 +672,16 @@ textarea {
     padding: 18px;
     border-top: 1px solid $lightGray;
 
+    @media (max-width: 1199px) {
+      padding: 15px;
+    }
+    @media (max-width: 767px) {
+      padding: 8px;
+    }
+    @media (max-width: 599px) {
+      padding: 0;
+      font-size: 11px;
+    }
     .hide-icons {
       opacity: 0;
       transition: all .3s linear;
@@ -664,6 +713,10 @@ textarea {
       flex-wrap: nowrap;
       .input-group + .input-group {
         margin-left: 20px;
+      }
+
+      @media (max-width: 599px) {
+        flex-direction: column;
       }
     }
   }
@@ -712,6 +765,12 @@ input[type="checkbox"] {
       flex-grow: 1;
       flex-basis: 33%;
 
+      @media (max-width: 991px) {
+        flex-basis: 50%;
+      }
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+      }
       label {
         flex-grow: 1;
       }
@@ -741,6 +800,11 @@ input[type="checkbox"] {
   .checkbox-wrap {
     width: 50%;
 
+    @media (max-width: 767px) {
+      width: 100%;
+      min-height: 135px;
+    }
+
     .checkbox-group {
       flex-basis: 100%;
     }
@@ -756,9 +820,18 @@ input[type="checkbox"] {
   padding: 20px;
   input[type='text'] {
     flex-grow: 1;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
   .btn {
     margin-left: 15px;
+
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
 
     .icon-links:before {
       content: '\004c';

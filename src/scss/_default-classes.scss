@@ -82,3 +82,10 @@
 .ver-ali-m{
   vertical-align: middle;
 }
+
+//hidden
+.hidden-768{
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
