@@ -2739,6 +2739,13 @@ input[type="checkbox"]:checked + label::before {
   opacity: 0;
 }
 
+.checkbox-wrap .range-title {
+  font-size: 16px;
+  color: #a6a6a6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
 .checkbox-head-wrap .checkbox-wrap {
   width: 50%;
 }
@@ -2778,4 +2785,51 @@ input[type="checkbox"]:checked + label::before {
 .generate-links .btn i {
   vertical-align: sub;
   margin-right: 15px;
+}
+
+#slider {
+  margin-top: 20px;
+}
+
+#slider #custom-handle {
+  top: -2px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-bottom-color: #f58220;
+  background: none;
+  margin-left: -15px;
+}
+
+#slider #custom-handle span {
+  position: absolute;
+  top: 25px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.ui-slider-horizontal {
+  height: 5px;
+}
+
+.ui-widget.ui-widget-content {
+  border: none;
+}
+
+.ui-widget-content {
+  background: #e3e3e3;
+}
+
+.ui-widget-header {
+  background: #f58220;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  color: inherit;
 }

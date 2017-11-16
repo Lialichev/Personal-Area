@@ -468,7 +468,7 @@ textarea {
 
   .card-form {
 
-    .postback-setting{
+    .postback-setting {
 
       .set-descroption {
         padding: 20px 0 0 20px;
@@ -562,12 +562,11 @@ textarea {
   }
 }
 
-
 .btn-row {
   padding: 23px 0;
 }
 
-.btn-wraps{
+.btn-wraps {
   padding: 20px;
   border-top: 1px solid #e3e3e3;
   text-align: right;
@@ -730,6 +729,12 @@ input[type="checkbox"] {
       }
     }
   }
+  .range-title {
+    font-size: 16px;
+    color: $titleColor;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
 }
 
 .checkbox-head-wrap {
@@ -767,3 +772,53 @@ input[type="checkbox"] {
     }
   }
 }
+
+//range slider
+#slider {
+  margin-top: 20px;
+  #custom-handle {
+    top: -2px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: $orange;
+    background: none;
+    margin-left: -15px;
+
+    span {
+      position: absolute;
+      top: 25px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.ui-slider-horizontal {
+  height: 5px;
+}
+
+.ui-widget.ui-widget-content {
+  border: none;
+}
+
+.ui-widget-content {
+  background: #e3e3e3;
+}
+
+.ui-widget-header {
+  background: $orange;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  color: inherit;
+}
+
+
+
+
+
