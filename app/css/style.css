@@ -163,6 +163,7 @@ img {
 }
 
 textarea {
+  width: 100%;
   resize: vertical;
 }
 
@@ -2107,7 +2108,8 @@ input[type='submit'].styler[disabled] {
   max-width: 455px;
 }
 
-input {
+input,
+textarea {
   padding: 15px;
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 5px;
@@ -2115,27 +2117,33 @@ input {
   color: #a6a6a6;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   color: #a6a6a6;
 }
 
-input::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: #a6a6a6;
 }
 
-input:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   color: #a6a6a6;
 }
 
-input::-ms-input-placeholder {
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
   color: #a6a6a6;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #a6a6a6;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border-color: #bababa;
   color: #333;
 }
@@ -2469,11 +2477,26 @@ input:focus {
   border-bottom: 1px solid #e3e3e3;
 }
 
+.card .card-form .postback-setting .set-descroption {
+  padding: 20px 0 0 20px;
+  font-weight: 400;
+  color: #333;
+}
+
 .card .card-form .select-group {
   padding: 20px;
 }
 
+.card .card-form .select-group .textarea-wrap {
+  width: 49%;
+}
+
+.card .card-form .select-group .textarea-wrap textarea {
+  min-height: 185px;
+}
+
 .card .card-form .select-group label {
+  display: block;
   font-size: 16px;
   color: #a6a6a6;
   margin-bottom: 10px;
@@ -2547,8 +2570,14 @@ input:focus {
   margin-top: 15px;
 }
 
-.links .btn-row {
+.btn-row {
   padding: 23px 0;
+}
+
+.btn-wrap {
+  padding: 23px 0;
+  border-top: 1px solid #e3e3e3;
+  text-align: right;
 }
 
 .table {

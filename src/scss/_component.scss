@@ -130,7 +130,8 @@
 }
 
 //input
-input {
+input,
+textarea {
   padding: 15px;
   border: 1px solid $lightGray;
   border-radius: 5px;
@@ -466,10 +467,28 @@ input {
   }
 
   .card-form {
+
+    .postback-setting{
+
+      .set-descroption {
+        padding: 20px 0 0 20px;
+        font-weight: 400;
+        color: $black;
+      }
+    }
     .select-group {
       padding: 20px;
 
+      .textarea-wrap {
+        width: 49%;
+
+        textarea {
+          min-height: 185px;
+        }
+      }
+
       label {
+        display: block;
         font-size: 16px;
         color: $titleColor;
         margin-bottom: 10px;
@@ -543,12 +562,15 @@ input {
   }
 }
 
-//Link{
-.links {
 
-  .btn-row {
-    padding: 23px 0;
-  }
+.btn-row {
+  padding: 23px 0;
+}
+
+.btn-wrap{
+  padding: 23px 0;
+  border-top: 1px solid #e3e3e3;
+  text-align: right;
 }
 
 //table
@@ -710,15 +732,15 @@ input[type="checkbox"] {
   }
 }
 
-.checkbox-head-wrap{
-  .checkbox-wrap{
+.checkbox-head-wrap {
+  .checkbox-wrap {
     width: 50%;
 
-    .checkbox-group{
+    .checkbox-group {
       flex-basis: 100%;
     }
 
-    & + .checkbox-wrap{
+    & + .checkbox-wrap {
       border-left: 1px solid #e3e3e3;
     }
   }
