@@ -4,7 +4,7 @@
 
     dropdownWrap.on('click', function (e) {
         e.preventDefault();
-        var target = $(this).find('.dropdown-menu');
+        var target = $(this).find('.drop-down-menu');
         target.slideToggle();
         $(this).toggleClass('open');
     });

@@ -102,7 +102,26 @@
 %title {
   color: $titleColor;
   font-size: $titleFontSize;
-  font-weight: $fontMedium;
+  font-weight: $fontRegular;
+}
+
+%topUserPanel{
+  cursor: pointer;
+  padding: 18px;
+  border-left: 1px solid $lightGray;
+  font-weight: $fontRegular;
+  font-size: 20px;
+  color: $darkGray;
+  position: relative;
+
+  &:hover {
+    background-color: $xsLightGray;
+  }
+
+  @media (max-width: 599px) {
+    padding: 18px 10px;
+    font-size: 15px;
+  }
 }
 
 .page-title {
@@ -154,107 +173,30 @@ textarea {
   background-color: $headerBg;
 
   .user-control {
-    cursor: pointer;
-    padding: 18px;
-    border-left: 1px solid $lightGray;
-    font-weight: $fontRegular;
-    font-size: 20px;
-    color: $darkGray;
-    position: relative;
-
-    @media (max-width: 599px) {
-      padding: 18px 10px;
-      font-size: 15px;
-    }
-
-    .icon-arrow-down {
-      font-size: 12px;
-    }
-
+    @extend %topUserPanel;
     &.open {
       background-color: $xsLightGray;
 
-      .icon-arrow-down {
+      .fa-angle-down {
         display: inline-block;
         transform: rotate(180deg);
         transition: all .1s linear;
         line-height: 0;
       }
     }
-
-    &:hover {
-      background-color: $xsLightGray;
-    }
   }
   .user-notification {
-    cursor: pointer;
-    padding: 18px;
-    border-left: 1px solid $lightGray;
-    font-weight: $fontRegular;
-    font-size: 20px;
-    color: $darkGray;
-
-    @media (max-width: 599px) {
-      padding: 18px 10px;
-      font-size: 15px;
-    }
+    @extend %topUserPanel;
 
     i {
       position: relative;
-
-      .index-notification {
-        width: 8px;
-        height: 8px;
-        background-color: $orange;
-        position: absolute;
-        top: -5px;
-        right: 1px;
-        border-radius: 50%;
-      }
-    }
-    &:hover {
-      background-color: $xsLightGray;
     }
   }
-  .user-profile {
-    cursor: pointer;
-    padding: 18px;
-    border-left: 1px solid $lightGray;
-    font-weight: $fontLight;
-    font-size: 20px;
-    color: $darkGray;
-
-    @media (max-width: 599px) {
-      padding: 18px 10px;
-      font-size: 15px;
-    }
-
-    span {
-      margin-left: 15px;
-      font-size: 13px;
-      color: $blue;
-    }
-
-    &:hover {
-      background-color: $xsLightGray;
-    }
+  .user-setting {
+    @extend %topUserPanel;
   }
   .user-quit {
-    cursor: pointer;
-    padding: 18px;
-    border-left: 1px solid $lightGray;
-    font-weight: $fontRegular;
-    font-size: 20px;
-    color: $darkGray;
-
-    @media (max-width: 599px) {
-      padding: 18px 10px;
-      font-size: 15px;
-    }
-
-    &:hover {
-      background-color: $xsLightGray;
-    }
+    @extend %topUserPanel;
   }
 }
 
@@ -326,7 +268,7 @@ textarea {
 
     .title-manager {
       text-transform: uppercase;
-      font-weight: $fontMedium;
+      font-weight: $fontRegular;
       color: $darkGray;
       margin-bottom: 17px;
     }
@@ -481,13 +423,13 @@ textarea {
         }
 
         .title-details {
-          font-weight: $fontBold;
+          font-weight: $fontSemiBold;
           color: $titleColor;
         }
       }
 
       .title-graphics {
-        font-weight: $fontBold;
+        font-weight: $fontSemiBold;
         color: $titleColor;
         font-size: 16px;
       }
@@ -579,7 +521,7 @@ textarea {
 }
 
 //Drop down
-.dropdown-menu {
+.drop-down-menu {
   display: none;
   position: absolute;
   padding: 10px 18px 24px;
