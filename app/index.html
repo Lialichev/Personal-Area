@@ -9,7 +9,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,300,700&amp;subset=cyrillic" rel="stylesheet">
 
     <!--Jquery UI-->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -133,6 +133,9 @@
         </div>
     </div>
     <!--My profile END-->
+    <div class="nav-send">
+        <span>навигация</span>
+    </div>
     <!--/menu-control-->
     <div class="aside-menu">
         <ul>
@@ -189,48 +192,53 @@
             <div class="card-header">
                 <span class="page-title">Главная страница</span>
             </div>
-            <div class="card-date text-center">
-                <form class="datepicker-form">
-                    <div class="date-input-wrap">
-                        <input type="text" name="from" id="from">
-                        <input type="text" name="to" id="to">
-                        <label for="from">
-                            <i class="icon-calendar"></i>
-                        </label>
-                    </div>
-                    <button class="btn active-btn line-height">
-                        <i class="icon-refresh"></i>
-                    </button>
-                </form>
-            </div>
+
             <div class="card-body">
-                <div class="general container sm">
-                    <div class="details-wrap flex-container justify-sb">
-                        <div class="left-details">
-                            <div class="visit-signups flex-container justify-sb">
-                                <span class="title-details">Visit Signups</span>
-                                <span>142</span>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box border-box-blue">
+                            <div class="icon-box bg-box-blue">
+                                <i class="fa fa-users" aria-hidden="true"></i>
                             </div>
-                            <div class="ftd flex-container justify-sb">
-                                <span class="title-details">FTD</span>
-                                <span>332</span>
-                            </div>
-                        </div>
-                        <div class="right-details">
-                            <div class="net-deposit flex-container justify-sb">
-                                <span class="title-details">Net Deposit</span>
-                                <span>472</span>
-                            </div>
-                            <div class="turn-over flex-container justify-sb">
-                                <span class="title-details">Turn Over</span>
-                                <span>276</span>
+                            <div class="info-box">
+                                <span class="d-block ttu">Ваш спонсор</span>
+                                <a href="#" class="text-bold">Vitaliy Monarhuy</a>
                             </div>
                         </div>
                     </div>
-                    <div class="title-graphics">
-                        <span>Earnings chart</span>
+                    <div class="col-md-3">
+                        <div class="box border-box-red">
+                            <div class="icon-box bg-box-red">
+                                <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-box">
+                                <span class="d-block ttu">Ваш кошелек</span>
+                                <a href="#" class="text-bold">R901287327648324</a>
+                            </div>
+                        </div>
                     </div>
-                    <canvas id="myChart" width="600" height="400"></canvas>
+                    <div class="col-md-3">
+                        <div class="box border-box-green">
+                            <div class="icon-box bg-box-green">
+                                <i class="fa fa-rub" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-box">
+                                <span class="d-block ttu">Ваш баланс</span>
+                                <a href="#" class="text-bold">0.000000000</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box border-box-org">
+                            <div class="icon-box bg-box-org">
+                                <i class="fa fa-th" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-box">
+                                <span class="d-block ttu">Комнаты</span>
+                                <a href="#" class="text-bold">Vitaliy Monarhuy</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

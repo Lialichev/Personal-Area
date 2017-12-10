@@ -74,14 +74,62 @@
   margin-left: auto;
 }
 
-//vertical
-.ver-ali-m{
-  vertical-align: middle;
+//display-block
+.d-block{
+  display: block;
 }
 
-//hidden
-.hidden-768{
-  @media (max-width: 991px) {
-    display: none;
+//ttu
+.ttu{
+  text-transform: uppercase;
+}
+
+//box
+
+.bg-box-blue{
+  background-color: #00c0ef;
+}
+
+.border-box-blue{
+  border: 2px solid #00c0ef;
+
+  &:hover{
+    background-color: #00c0ef !important;
+  }
+}
+
+.bg-box-red{
+  background-color: #dd4b39;
+}
+
+.border-box-red{
+  border: 2px solid #dd4b39;
+
+  &:hover{
+    background-color: #dd4b39 !important;
+  }
+}
+
+.bg-box-green{
+   background-color: #00a65a;
+ }
+
+.border-box-green{
+  border: 2px solid #00a65a;
+
+  &:hover{
+    background-color: #00a65a !important;
+  }
+}
+
+.bg-box-org{
+  background-color: #f58220;
+}
+
+.border-box-org{
+  border: 2px solid #f58220;
+
+  &:hover{
+    background-color: #f58220 !important;
   }
 }
