@@ -52,26 +52,20 @@
       }
     }
 
-    .your-manager {
-      padding: 30px 0 0 0;
+    .my-profile {
+      padding: 10px 5px;
       justify-content: space-around;
-      .title-manager {
-        display: none;
-      }
-      .manager-data {
+
+      .profile-data {
         display: block;
 
-        .manager-name {
+        .profiler-name {
           display: none;
         }
 
-        .manager-photo {
+        .profile-photo {
           margin: 0;
           text-align: center;
-
-          .manager-status{
-            right: 8px;
-          }
         }
       }
     }

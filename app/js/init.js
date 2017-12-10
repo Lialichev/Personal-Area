@@ -10,6 +10,10 @@ $(function () {
             closeClass: 'close'
         });
     });
+
+    //scrollbar init
+    $('.scrollbar-inner').scrollbar();
+
 //chart init
     var chartBlock = document.getElementById('myChart');
     if (chartBlock) {

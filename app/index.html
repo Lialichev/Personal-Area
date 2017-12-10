@@ -9,12 +9,16 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700&amp;subset=cyrillic" rel="stylesheet">
 
     <!--Jquery UI-->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--sweet-->
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,33 +30,74 @@
 <!--HEADER-->
 <header id="header" class="fixed-to-top">
     <div class="flex-container justify-end align-center">
-        <div class="user-notification">
-            <i class="fa fa-bell-o"></i>
+        <div class="user-notification dropdown-wrap">
+            <i class="fa fa-bell-o" title="Уведомления">
+                <span class="active-notification active"></span>
+            </i>
+            <div class="drop-down-menu drop-down-notification">
+                <div class="notification">
+                    <span>У вас 10 уведомлений</span>
+                </div>
+                <div class="content scrollbar-inner">
+                    <ul>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                        <li>SADASDSADSADSA</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="user-setting">
-            <i class="fa fa-cog" aria-hidden="true" title="Настройки"></i>
+        <div class="user-set">
+            <a href="links.html" class="user-setting">
+                <span href="links.html" class="fa fa-cog" aria-hidden="true" title="Настройки"></span>
+            </a>
         </div>
-        <div class="user-control dropdown-wrap">
+        <div class="user-lang dropdown-wrap">
             <i class="fa fa-language" aria-hidden="true"></i>
-            <span class="mg-span">Русский</span>
+            <span class="lang-text">Russian</span>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="drop-down-menu">
+            <div class="drop-down-menu drop-down-lang">
                 <ul>
                     <li>
-                        <a href="links.html" class="dropdown-link">English</a>
-                        <img src="img/United-Kingdom.png" alt="">
+                        <a href="#">
+                            <span class="dropdown-link">English</span>
+                            <img src="img/United-Kingdom.png" alt="">
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-link">Fransic</a>
-                        <img src="img/France.png" alt="">
+                        <a href="#">
+                            <span class="dropdown-link">Fransic</span>
+                            <img src="img/France.png" alt="">
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-link">Deugst</a>
-                        <img src="img/Germany.png" alt="">
+                        <a href="#">
+                            <span class="dropdown-link">Deugst</span>
+                            <img src="img/Germany.png" alt="">
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-link">Russian</a>
-                        <img src="img/Russia.png" alt="">
+                        <a href="#">
+                            <span class="dropdown-link">Russian</span>
+                            <img src="img/Russia.png" alt="">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +114,7 @@
     <div class="menu-control flex-container justify-sb align-center">
         <div class="logo">
             <a href="#">
-                <img src="img/logo.png" alt="">
+                FREEDOM
             </a>
         </div>
         <div class="menu-btn">
@@ -78,37 +123,47 @@
             <span></span>
         </div>
     </div>
+    <!--My profile-->
+    <div class="my-profile">
+        <div class="profile-data flex-container justify-sb align-center">
+            <div class="profile-photo">
+                <img src="img/manager-photo.png" alt="">
+            </div>
+            <span class="profiler-name">Mikhael E.</span>
+        </div>
+    </div>
+    <!--My profile END-->
     <!--/menu-control-->
     <div class="aside-menu">
         <ul>
             <li class="active">
                 <a href="#">
-                    <i class="icon-general"></i>
-                    <span>Главная страница</span>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Главная</span>
                 </a>
             </li>
             <li>
                 <a href="details.html">
-                    <i class="icon-details"></i>
-                    <span>Details</span>
+                    <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                    <span>Статистика</span>
                 </a>
             </li>
             <li>
                 <a href="links.html">
-                    <i class="icon-links"></i>
-                    <span>Links</span>
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <span>Настройки</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="icon-banners"></i>
-                    <span>Banners</span>
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                    <span>Поддержка</span>
                 </a>
             </li>
             <li>
                 <a href="perconal-date.html">
-                    <i class="icon-personaldata"></i>
-                    <span>Personal data</span>
+                    <i class="fa fa-th"></i>
+                    <span>Мои комнаты</span>
                 </a>
             </li>
             <li>
@@ -126,18 +181,6 @@
         </ul>
     </div>
     <!--/menu-control end-->
-    <div class="your-manager">
-        <div class="title-manager">
-            <span>your manager</span>
-        </div>
-        <div class="manager-data flex-container justify-sb align-center">
-            <div class="manager-photo">
-                <img src="img/manager-photo.png" alt="">
-                <span class="manager-status"></span>
-            </div>
-            <span class="manager-name">Mikhael E.</span>
-        </div>
-    </div>
 </aside>
 <!--ASIDE END-->
 <main id="main">
@@ -197,7 +240,10 @@
 <div id="loading">
     <div id="loading-center">
         <div id="loading-center-absolute">
-            <div id="object"></div>
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_one"></div>
         </div>
     </div>
 </div>
@@ -206,7 +252,9 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 <script src="js/jquery.bpopup.min.js"></script>
+<script src="js/sweetalert2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
 <!--init plugins-->
 <script src="js/init.js"></script>
 <!--Plugins-->
