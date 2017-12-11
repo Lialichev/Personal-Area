@@ -38,29 +38,26 @@
                 <div class="notification">
                     <span>У вас 10 уведомлений</span>
                 </div>
-                <div class="content scrollbar-inner">
-                    <ul>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
-                        <li>SADASDSADSADSA</li>
+                <div class="content">
+                    <ul class="new-notification">
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" title="Уведомления"></i>Very long description here that may not fit into the</a></li>
+
                     </ul>
+                </div>
+                <div class="view-content">
+                    <a href="#">Посмотреть все</a>
                 </div>
             </div>
         </div>
@@ -74,7 +71,7 @@
             <span class="lang-text">Russian</span>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
             <div class="drop-down-menu drop-down-lang">
-                <ul>
+                <ul class="lang-variables">
                     <li>
                         <a href="#">
                             <span class="dropdown-link">English</span>
@@ -192,10 +189,9 @@
             <div class="card-header">
                 <span class="page-title">Главная страница</span>
             </div>
-
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="box border-box-blue">
                             <div class="icon-box bg-box-blue">
                                 <i class="fa fa-users" aria-hidden="true"></i>
@@ -206,18 +202,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="box border-box-red">
                             <div class="icon-box bg-box-red">
                                 <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                             </div>
                             <div class="info-box">
                                 <span class="d-block ttu">Ваш кошелек</span>
-                                <a href="#" class="text-bold">R901287327648324</a>
+                                <a href="#" class="text-bold">R901287327640</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="box border-box-green">
                             <div class="icon-box bg-box-green">
                                 <i class="fa fa-rub" aria-hidden="true"></i>
@@ -228,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="box border-box-org">
                             <div class="icon-box bg-box-org">
                                 <i class="fa fa-th" aria-hidden="true"></i>
@@ -238,6 +234,22 @@
                                 <a href="#" class="text-bold">Vitaliy Monarhuy</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-date">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="title">
+                            <span>Расходы и Прибыль</span>
+                        </div>
+                        <canvas id="vertical"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="title">
+                            <span>Заинтересованность</span>
+                        </div>
+                        <canvas id="pip"></canvas>
                     </div>
                 </div>
             </div>
@@ -262,7 +274,6 @@
 <script src="js/jquery.bpopup.min.js"></script>
 <script src="js/sweetalert2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrollbar.js"></script>
 <!--init plugins-->
 <script src="js/init.js"></script>
 <!--Plugins-->

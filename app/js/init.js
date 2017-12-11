@@ -11,26 +11,23 @@ $(function () {
         });
     });
 
-    //scrollbar init
-    $('.scrollbar-inner').scrollbar();
-
 //chart init
-    var chartBlock = document.getElementById('myChart');
+    var chartBlock = document.getElementById('vertical');
     if (chartBlock) {
         var myChart = new Chart(chartBlock, {
             type: 'bar',
             data: {
-                labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+                labels: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Субота', 'Воскресенье'],
                 datasets: [
                     {
-                        label: 'Signups',
-                        data: [100, 200, 220, 170, 130, 90, 321, 192, 234],
-                        backgroundColor: 'rgba(128, 191, 202, 1)'
+                        label: 'Прибыль',
+                        data: [100, 200, 220, 170, 130, 90, 321],
+                        backgroundColor: 'rgba(60, 141, 188, 1)'
                     },
                     {
-                        label: 'FTD',
-                        data: [231, 42, 241, 322, 145, 290, 132, 152, 289],
-                        backgroundColor: 'rgba(255, 154, 56, 1)'
+                        label: 'Расходы',
+                        data: [231, 42, 241, 322, 145, 290, 132],
+                        backgroundColor: 'rgba(245, 130, 32, 1)'
                     }
                 ]
             },
@@ -43,6 +40,26 @@ $(function () {
                         }
                     }]
                 }
+            }
+        })
+    }
+    var chartBlockPip = document.getElementById('pip');
+    if (chartBlockPip) {
+        var myPieChart = new Chart (chartBlockPip, {
+            type: 'pie',
+            data: {
+                labels: ['Один', 'Два', 'Три', 'Чет', 'Пять'],
+                datasets: [
+                    {
+                        data: [100, 200, 220, 170, 130],
+                        backgroundColor: [
+                            '#36a2eb',
+                            '#ff6384',
+                            '#ff9f40',
+                            '#4bc0c0',
+                            '#ffcd56'
+                        ]
+                    }]
             }
         })
     }
