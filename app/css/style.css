@@ -285,6 +285,8 @@ button {
   font-size: 17px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  padding-left: 5px;
+  border-left: 2px solid #f58220;
 }
 
 #loading {
@@ -562,6 +564,9 @@ textarea:focus {
   border-left-color: #3c8dbc;
   background-color: #1e282c;
   color: #fff;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 #aside {
@@ -725,6 +730,11 @@ textarea:focus {
   border-bottom: 1px solid #e3e3e3;
 }
 
+.card .card-date .news-wrap {
+  padding-top: 5px;
+  border-top: 2px solid #f58220;
+}
+
 .card .card-date .news-wrap ul li {
   position: relative;
 }
@@ -732,7 +742,7 @@ textarea:focus {
 .card .card-date .news-wrap ul li .new-data {
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 5px;
 }
 
 .card .card-date .news-wrap ul li .news-info {
