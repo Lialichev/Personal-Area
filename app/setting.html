@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Поддержка</title>
+    <title>Настройки</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
@@ -161,13 +161,13 @@
                     <span>Статистика</span>
                 </a>
             </li>
-            <li>
+            <li  class="active">
                 <a href="setting.html">
                     <i class="fa fa-cog" aria-hidden="true"></i>
                     <span>Настройки</span>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="support.html">
                     <i class="fa fa-question" aria-hidden="true"></i>
                     <span>Поддержка</span>
@@ -200,30 +200,47 @@
     <div class="content-wrapper">
         <div class="card">
             <div class="card-header">
-                <span class="page-title">Поддержка</span>
+                <span class="page-title">Настройки профиля</span>
             </div>
             <div class="card-date">
                 <div class="title">
-                    <span>Новый вопрос</span>
+                    <span>Изменить ФИО</span>
                 </div>
-                <form class="no-style">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <input placeholder="Тема вопроса" type="text" required="">
-                            <input placeholder="Ваш Email" type="email" required="">
-                            <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
-                            <label for="styled-checkbox-1">Я не робот</label>
-                        </div>
-                        <div class="col-md-7">
-                            <textarea name="question" id="asd" cols="30" rows="10" title="asd" placeholder="Полное описание вопроса..."></textarea>
-                            <span>*ваш вопрос будет обработан в течении 24-х часов</span>
-                        </div>
-                    </div>
+                <form>
+                    <input placeholder="Имя" type="text" required="">
+                    <input placeholder="Фамилия" type="text" required="">
+                    <input placeholder="Отчество" type="text" required="">
                 </form>
+                <div class="title">
+                    <span>Изменить Фото</span>
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                    <label for="file">Загрузить фото</label>
+                    <input type="file" name="file" id="file">
+                </form>
+                <div class="title">
+                <span>Изменить Email</span>
             </div>
-            <div class="card-date">
+                <form>
+                    <input placeholder="Текущий Email" type="email" required="@">
+                    <input placeholder="Новый Email" type="email" required="">
+                </form>
+                <div class="title">
+                    <span>Изменить Пароль</span>
+                </div>
+                <form>
+                    <input placeholder="Текущий пароль" type="password" required="">
+                    <input placeholder="Новый пароль" type="password" required="">
+                    <input placeholder="Повторите новый пароль" type="password" required="">
+                </form>
+                <div class="title">
+                    <span>Електронные кошельки</span>
+                </div>
+                <form>
+                    <input placeholder="Счет Qiwi" type="number" required="">
+                </form>
                 <div class="text-right">
-                    <button class="ripple ripple-jquery" data-ripple-color="#FFF" type="submit">Отправить вопрос</button>
+                    <button class="ripple ripple-jquery" data-ripple-color="#FFF" type="submit" form="form">Сохранить</button>
                 </div>
             </div>
         </div>

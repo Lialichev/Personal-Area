@@ -37,6 +37,51 @@
         }
     });
 
+    // Button
+    $('.ripple-jquery').on('click', function(e) {
+        var rippleDiv = $('<span>'),
+            rippleOffset = $(this).offset(),
+            rippleY = e.pageY - rippleOffset.top,
+            rippleX = e.pageX - rippleOffset.left,
+            ripple = $('span');
+
+        rippleDiv.css({
+            top: rippleY - (ripple.height() / 2),
+            left: rippleX - (ripple.width() / 2),
+            background: $(this).data("ripple-color")
+        }).appendTo($(this));
+
+        window.setTimeout(function() {
+            rippleDiv.remove();
+        }, 500);
+    });
+
+//fileInput
+    $(function(){
+
+        $("[type=file]").on("change", function(){
+            var file = this.files[0];
+            var formdata = new FormData();
+            formdata.append("file", file);
+
+            $('#type span').empty().append (file.type);
+            if(file.name.length >= 30){
+                $('label').text("Фото : " + file.name.substr(0,30) + '..');
+            }else {
+                $('label').text("Фото : " + file.name);
+            }
+
+            var ext = $('#file').val().split('.').pop().toLowerCase();
+            if($.inArray(ext, ['php', 'html']) !== -1) {
+                $('#info').hide();
+                $('label').text('Фото');
+                $('#file').val('');
+                alert('This file extension is not allowed!');
+            }
+
+        });
+
+    });
 //loader hide
     var loader = $('#loading');
 
