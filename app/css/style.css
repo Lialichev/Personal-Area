@@ -179,6 +179,12 @@ button {
   height: 280px;
 }
 
+@media (max-width: 599px) {
+  .drop-down-notification {
+    left: -172px;
+  }
+}
+
 .d-block {
   display: block;
 }
@@ -610,10 +616,15 @@ form [type=file] {
   background-color: #299fb8;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   #header .user-lang, #header .user-notification, #header .user-setting, #header .user-quit {
     padding: 18px 10px;
-    font-size: 15px;
+  }
+}
+
+@media (max-width: 599px) {
+  #header .user-lang, #header .user-notification, #header .user-setting, #header .user-quit {
+    padding: 18px 7px;
   }
 }
 
@@ -816,6 +827,24 @@ form [type=file] {
   font-size: 20px;
 }
 
+@media (max-width: 1380px) {
+  .card .card-body .box .info-box a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .card .card-body .box .info-box a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .card .card-body .box .info-box {
+    margin-left: 84px;
+  }
+}
+
 .card .card-body .box .icon-box {
   float: left;
   margin-top: -2px;
@@ -900,6 +929,12 @@ form [type=file] {
   color: #979797;
 }
 
+@media (max-width: 599px) {
+  .card .card-date .news-wrap ul li .news-info p {
+    width: 277px;
+  }
+}
+
 .card .card-date .news-wrap ul li + li {
   margin-top: 10px;
 }
@@ -907,6 +942,18 @@ form [type=file] {
 .card .card-date .news-wrap ul li:hover {
   cursor: pointer;
   background-color: #e3e3e3;
+}
+
+@media (max-width: 992px) {
+  .card .card-date .news-wrap {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card .card-date {
+    padding: 30px 15px;
+  }
 }
 
 .page-title {
@@ -1101,4 +1148,10 @@ table {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  canvas {
+    margin-bottom: 20px;
+  }
 }

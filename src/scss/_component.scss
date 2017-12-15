@@ -334,9 +334,11 @@ form {
     background-color: #299fb8;
   }
 
-  @media (max-width: 599px) {
+  @media (max-width: 767px) {
     padding: 18px 10px;
-    font-size: 15px;
+  }
+  @media (max-width: 599px) {
+    padding: 18px 7px;
   }
 }
 
@@ -536,6 +538,16 @@ form {
 
         a {
           font-size: 20px;
+
+          @media (max-width: 1380px) {
+            font-size: 17px;
+          }
+          @media (max-width: 1199px) {
+            font-size: 20px;
+          }
+        }
+        @media (max-width: 1380px) {
+          margin-left: 84px;
         }
       }
 
@@ -550,6 +562,10 @@ form {
         color: white;
         line-height: 90px;
         transition: all .1s linear;
+      }
+
+      @media (max-width: 1380px) {
+
       }
     }
   }
@@ -615,6 +631,10 @@ form {
               overflow: hidden;
               text-overflow: ellipsis;
               color: #979797;
+
+              @media (max-width: 599px) {
+                width: 277px;
+              }
             }
           }
 
@@ -628,6 +648,14 @@ form {
           }
         }
       }
+
+      @media (max-width: 992px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      padding: 30px 15px;
     }
   }
 }
@@ -819,6 +847,10 @@ table {
   font-weight: 400;
 }
 
-
+canvas{
+  @media (max-width: 992px) {
+    margin-bottom: 20px;
+  }
+}
 
 

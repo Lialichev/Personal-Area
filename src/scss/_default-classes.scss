@@ -30,6 +30,10 @@
 .drop-down-notification {
   left: -250px;
   height: 280px;
+  
+  @media (max-width: 599px) {
+    left: -172px;
+  }
 }
 
 //display-block
