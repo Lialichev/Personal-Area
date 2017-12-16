@@ -150,6 +150,12 @@ button {
           justify-content: space-between;
 }
 
+.justify-sa {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
 .justify-end {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -267,6 +273,10 @@ button {
   border: none;
   margin: auto;
   padding: 0;
+}
+
+.mt-button-rooms {
+  margin-top: 52px;
 }
 
 #loading {
@@ -442,7 +452,7 @@ button {
   padding-top: 30px;
   height: 0;
   overflow: hidden;
-  border: 3px solid #27acbf;
+  border: 2px solid #f58220;
 }
 
 .myvideo iframe,
@@ -865,33 +875,65 @@ form [type=file] {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.card .card-date .video-description {
-  color: #979797;
-  font-size: 18px;
+.card .card-date .room-wrap {
+  position: relative;
 }
 
-.card .card-date .video-description span {
-  display: block;
-  font-size: 25px;
-  color: #f58220;
-  margin-bottom: 10px;
+.card .card-date .room-wrap .img img {
+  height: 300px;
+}
+
+.card .card-date .room-wrap .list {
+  max-height: 150px;
+  overflow: auto;
+  max-width: 700px;
+}
+
+.card .card-date .room-wrap .list ul {
+  list-style: disc;
+  margin-left: 18px;
+}
+
+.card .card-date .room-wrap .list ul li {
+  color: #929292;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  border-bottom: 2px solid #27acbf;
 }
 
-.card .card-date .video-time {
-  padding: 10px;
-  border: 2px solid #27acbf;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  display: inline-block;
+.card .card-date .room-wrap .list ul li + li {
   margin-top: 10px;
 }
 
-.card .card-date .video-time span {
-  color: #f58220;
-  font-weight: 400;
+.card .card-date .video-wrap {
+  padding: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.card .card-date .video-wrap .date-time {
+  margin-top: 10px;
+}
+
+.card .card-date .video-wrap .date-time .data-video {
+  font-size: 13px;
+}
+
+.card .card-date .video-wrap .date-time .video-time {
+  color: #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #f58220;
+  font-weight: 600;
+}
+
+.card .card-date .video-wrap:hover {
+  cursor: pointer;
+  background-color: #e3e3e3;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .card .card-date .news-wrap {
@@ -954,6 +996,17 @@ form [type=file] {
   .card .card-date {
     padding: 30px 15px;
   }
+}
+
+.card .rooms-hover {
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.card .rooms-hover:hover {
+  cursor: pointer;
+  background-color: #e3e3e3;
 }
 
 .page-title {

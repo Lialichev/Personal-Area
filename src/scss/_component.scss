@@ -105,6 +105,7 @@
     transform: rotate(360deg) scale(0.8);
   }
 }
+
 //Loader End
 
 //checkbox
@@ -190,7 +191,7 @@
   padding-top: 30px;
   height: 0;
   overflow: hidden;
-  border: 3px solid #27acbf;
+  border: 2px solid #f58220;
 
   iframe,
   object,
@@ -574,29 +575,60 @@ form {
     padding: 30px;
     border-bottom: 1px solid $lightGray;
 
-    .video-description{
-      color: #979797;
-      font-size: 18px;
-      span{
-        display: block;
-        font-size: 25px;
-        color: #f58220;
-        margin-bottom: 10px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        border-bottom: 2px solid #27acbf;
+    .room-wrap{
+      position: relative;
+      .img{
+        img{
+          height: 300px;
+        }
+      }
+      .list{
+        max-height: 150px;
+        overflow: auto;
+        max-width: 700px;
+
+        ul{
+          list-style: disc;
+          margin-left: 18px;
+          
+          li{
+            color: #929292;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+
+            &+li{
+              margin-top: 10px;
+            }
+          }
+        }
       }
     }
-    .video-time{
+
+    .video-wrap{
       padding: 10px;
-      border: 2px solid #27acbf;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      display: inline-block;
-      margin-top: 10px;
-      span{
-        color: #f58220;
-        font-weight: 400;
+      border-radius: 5px;
+      margin-bottom: 30px;
+
+      .date-time {
+        margin-top: 10px;
+
+        .data-video{
+          font-size: 13px;
+        }
+
+        .video-time{
+          color: #fff;
+          border-radius: 5px;
+          padding: 5px 10px;
+          background-color: #f58220;
+          font-weight: 600;
+        }
+      }
+
+      &:hover{
+        cursor: pointer;
+        background-color: $lightGray;
+        transition: all .2s linear;
       }
     }
 
@@ -656,6 +688,15 @@ form {
 
     @media (max-width: 767px) {
       padding: 30px 15px;
+    }
+  }
+
+  .rooms-hover{
+    transition: all .2s linear;
+
+    &:hover{
+      cursor: pointer;
+      background-color: #e3e3e3;
     }
   }
 }
@@ -725,10 +766,10 @@ form {
           font-size: 15px;
           font-weight: 300;
 
-          i{
+          i {
             margin-right: 5px;
           }
-          span{
+          span {
             font-size: 13px;
           }
         }
@@ -847,7 +888,7 @@ table {
   font-weight: 400;
 }
 
-canvas{
+canvas {
   @media (max-width: 992px) {
     margin-bottom: 20px;
   }
