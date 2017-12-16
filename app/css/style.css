@@ -904,6 +904,12 @@ form [type=file] {
   margin-top: 10px;
 }
 
+@media (max-width: 991px) {
+  .card .card-date .room-wrap .title {
+    margin-top: 20px;
+  }
+}
+
 .card .card-date .video-wrap {
   padding: 10px;
   -webkit-border-radius: 5px;
@@ -1195,6 +1201,12 @@ table {
   font-size: 16px;
   font-weight: 300;
   color: #979797;
+}
+
+@media (max-width: 599px) {
+  .panel-group .panel-default .panel-body {
+    font-size: 14px;
+  }
 }
 
 .title-accord {

@@ -602,6 +602,12 @@ form {
           }
         }
       }
+
+      .title{
+        @media (max-width: 991px) {
+          margin-top: 20px;
+        }
+      }
     }
 
     .video-wrap{
@@ -878,6 +884,10 @@ table {
       font-size: 16px;
       font-weight: 300;
       color: #979797;
+
+      @media (max-width: 599px) {
+        font-size: 14px;
+      }
     }
   }
 }
