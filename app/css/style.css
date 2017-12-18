@@ -873,10 +873,106 @@ form [type=file] {
 .card .card-date {
   padding: 30px;
   border-bottom: 1px solid #e3e3e3;
+  position: relative;
+}
+
+.card .card-date .cont {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .card-date .cont .dor {
+  text-align: center;
+  padding: 10px;
+}
+
+.card .card-date .cont .dor .img-dor img {
+  height: 200px;
+}
+
+.card .card-date .cont .dor .name-room {
+  padding: 5px 7px;
+  font-size: 13px;
+  background-color: #f58220;
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+
+@media (max-width: 1199px) {
+  .card .card-date .cont .dor {
+    -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card .card-date .cont .dor {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .card .card-date .cont {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
 }
 
 .card .card-date .room-wrap {
   position: relative;
+}
+
+.card .card-date .room-wrap .list.on-page-room {
+  max-height: 245px;
+}
+
+.card .card-date .room-wrap .number-box-wrap {
+  height: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .card-date .room-wrap .number-box-wrap .num-box {
+  background-color: #eeeeee;
+  height: 115px;
+  width: 153px;
+  text-align: center;
+  padding: 15px;
+  color: #8c8c8c;
+}
+
+.card .card-date .room-wrap .number-box-wrap .num-box .icon-num {
+  font-size: 20px;
+  color: #27afc0;
+}
+
+.card .card-date .room-wrap .number-box-wrap .num-box .number {
+  font-size: 30px;
+}
+
+.card .card-date .room-wrap .number-box-wrap .num-box .description-num {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 991px) {
+  .card .card-date .room-wrap .number-box-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .card .card-date .room-wrap .img img {
@@ -908,6 +1004,10 @@ form [type=file] {
   .card .card-date .room-wrap .title {
     margin-top: 20px;
   }
+}
+
+.card .card-date .description-room {
+  max-width: 780px;
 }
 
 .card .card-date .video-wrap {
@@ -1219,4 +1319,203 @@ table {
   canvas {
     margin-bottom: 20px;
   }
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.table {
+  margin: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+
+@media screen and (max-width: 767px) {
+  .table {
+    display: block;
+  }
+}
+
+.rows {
+  display: table-row;
+  background: #f6f6f6;
+}
+
+.rows:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+
+.rows.header {
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #f58220;
+}
+
+.rows.green {
+  background: #27ae60;
+}
+
+.rows.blue {
+  background: #2980b9;
+}
+
+@media screen and (max-width: 767px) {
+  .rows {
+    padding: 14px 0 7px;
+    display: block;
+  }
+  .rows.header {
+    padding: 0;
+    height: 6px;
+  }
+  .rows.header .cell {
+    display: none;
+  }
+  .rows .cell {
+    margin-bottom: 10px;
+  }
+  .rows .cell:before {
+    margin-bottom: 3px;
+    content: attr(data-title);
+    min-width: 98px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #969696;
+    display: block;
+  }
+}
+
+.cell {
+  padding: 10px 11px;
+  display: table-cell;
+}
+
+@media screen and (max-width: 767px) {
+  .cell {
+    padding: 2px 16px;
+    display: block;
+  }
+}
+
+.tree {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 0 0 0;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child {
+  padding-top: 0;
+}
+
+/*Remove left connector from first child and
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li a {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-decoration: none;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: rgba(245, 130, 32, 0.588235);
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover + ul li a {
+  background-color: rgba(39, 172, 191, 0.4);
+  color: #000;
+  border: 1px solid #fff;
+}
+
+/*Connector styles on hover*/
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  border-color: #94a0b4;
 }

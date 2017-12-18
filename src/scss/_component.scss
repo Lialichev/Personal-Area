@@ -574,43 +574,122 @@ form {
   .card-date {
     padding: 30px;
     border-bottom: 1px solid $lightGray;
+    position: relative;
 
-    .room-wrap{
+    .cont{
+      display: flex;
+
+
+      .dor{
+        text-align: center;
+        padding: 10px;
+
+        .img-dor{
+          img{
+            height: 200px;
+          }
+        }
+
+        .name-room{
+          padding: 5px 7px;
+          font-size: 13px;
+          background-color: $orange;
+          color: #FFFFFF;
+          margin: 10px 0;
+        }
+        
+        @media (max-width: 1199px) {
+          flex-basis: 25%;
+          margin-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+      }
+
+      @media (max-width: 1199px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .room-wrap {
       position: relative;
-      .img{
-        img{
+
+      .list {
+
+        &.on-page-room{
+          max-height: 245px;
+        }
+      }
+      .number-box-wrap {
+        height: 300px;
+        flex-direction: column;
+
+        .num-box {
+          background-color: #eeeeee;
+          height: 115px;
+          width: 153px;
+          text-align: center;
+          padding: 15px;
+          color: #8c8c8c;
+
+          .icon-num {
+            font-size: 20px;
+            color: #27afc0;
+          }
+
+          .number {
+            font-size: 30px;
+          }
+          .description-num {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+          }
+        }
+
+        @media (max-width: 991px) {
+          flex-direction: row;
+        }
+      }
+      .img {
+        img {
           height: 300px;
         }
       }
-      .list{
+      .list {
         max-height: 150px;
         overflow: auto;
         max-width: 700px;
 
-        ul{
+        ul {
           list-style: disc;
           margin-left: 18px;
-          
-          li{
+
+          li {
             color: #929292;
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
 
-            &+li{
+            & + li {
               margin-top: 10px;
             }
           }
         }
       }
 
-      .title{
+      .title {
         @media (max-width: 991px) {
           margin-top: 20px;
         }
       }
     }
 
-    .video-wrap{
+    .description-room {
+      max-width: 780px;
+    }
+
+    .video-wrap {
       padding: 10px;
       border-radius: 5px;
       margin-bottom: 30px;
@@ -618,11 +697,11 @@ form {
       .date-time {
         margin-top: 10px;
 
-        .data-video{
+        .data-video {
           font-size: 13px;
         }
 
-        .video-time{
+        .video-time {
           color: #fff;
           border-radius: 5px;
           padding: 5px 10px;
@@ -631,7 +710,7 @@ form {
         }
       }
 
-      &:hover{
+      &:hover {
         cursor: pointer;
         background-color: $lightGray;
         transition: all .2s linear;
@@ -697,10 +776,10 @@ form {
     }
   }
 
-  .rooms-hover{
+  .rooms-hover {
     transition: all .2s linear;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
       background-color: #e3e3e3;
     }
@@ -904,4 +983,184 @@ canvas {
   }
 }
 
+//Table
+.wrapper {
+  margin: 0 auto;
+}
 
+.table {
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+
+@media screen and (max-width: 767px) {
+  .table {
+    display: block;
+  }
+}
+
+.rows {
+  display: table-row;
+  background: #f6f6f6;
+}
+
+.rows:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+
+.rows.header {
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #f58220;
+}
+
+.rows.green {
+  background: #27ae60;
+}
+
+.rows.blue {
+  background: #2980b9;
+}
+
+@media screen and (max-width: 767px) {
+  .rows {
+    padding: 14px 0 7px;
+    display: block;
+  }
+  .rows.header {
+    padding: 0;
+    height: 6px;
+  }
+  .rows.header .cell {
+    display: none;
+  }
+  .rows .cell {
+    margin-bottom: 10px;
+  }
+  .rows .cell:before {
+    margin-bottom: 3px;
+    content: attr(data-title);
+    min-width: 98px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #969696;
+    display: block;
+  }
+}
+
+.cell {
+  padding: 10px 11px;
+  display: table-cell;
+}
+
+@media screen and (max-width: 767px) {
+  .cell {
+    padding: 2px 16px;
+    display: block;
+  }
+}
+
+.tree{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.tree ul {
+  padding-top: 20px; position: relative;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left; text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 0 0 0;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute; top: 0; right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%; height: 20px;
+}
+.tree li::after{
+  right: auto; left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0; height: 20px;
+}
+
+.tree li a{
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-decoration: none;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.5s;
+  background-color: rgba(245, 130, 32, 0.5882352941176471);
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+  background-color: rgba(39, 172, 191, 0.4);
+  color: #000;
+  border: 1px solid #fff;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before{
+  border-color:  #94a0b4;
+}
